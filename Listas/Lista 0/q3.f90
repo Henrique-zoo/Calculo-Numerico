@@ -4,12 +4,13 @@ program questao3
     real, dimension(25) :: data
     character(len=100) :: iomsg
 
-    open(newunit = iunit, &
-        file = '../Dados/q1.dat', &
-        status = 'unknown', &
-        action = 'read', &
-        iostat = iostat, &
-        iomsg = iomsg &
+    open(&
+        newunit = iunit,            &
+        file = '../Dados/q1.dat',   &
+        status = 'unknown',         &
+        action = 'read',            &
+        iostat = iostat,            &
+        iomsg = iomsg               &
     )
     
     if (iostat /= 0) then
@@ -26,7 +27,8 @@ program questao3
 
     call merge_sort(data, size(data))
 
-    open(newunit = iunit, &
+    open(&
+        newunit = iunit, &
         file = '../Dados/q3.dat', &
         status = 'replace', &
         action = 'write', &
@@ -46,7 +48,6 @@ program questao3
     close(iunit)
 
 contains
-
     recursive subroutine merge_sort(arr, n)
         real, intent(inout) :: arr(:)
         integer, intent(in) :: n

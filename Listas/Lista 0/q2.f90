@@ -4,7 +4,8 @@ program questao2
     real :: trash, sen, arcsen
     character(len=100) :: iomsg
 
-    open(newunit = iunit,           &
+    open(&
+        newunit = iunit,            &
         file = '../Dados/q1.dat',   &
         status = 'old',             &
         action = 'readwrite',       &
@@ -17,10 +18,11 @@ program questao2
         stop
     end if
 
-    open(newunit = temp_unit, &
-        status = 'scratch', &
-        iostat = iostat, &
-        iomsg = iomsg &
+    open(&
+        newunit = temp_unit,    &
+        status = 'scratch',     &
+        iostat = iostat,        &
+        iomsg = iomsg           &
     )
     
     if (iostat /= 0) then

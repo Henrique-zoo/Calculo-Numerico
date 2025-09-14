@@ -16,13 +16,13 @@ program questao6
     call flops_and_matrix_product(A, B, C, flops)
 
     open(&
-        newunit = iunit, &
-        file = '../Dados/q6.dat', &
-        action = 'write', &
-        status = 'unknown', &
-        position = 'append', &
-        iostat = iostat, &
-        iomsg = iomsg &
+        newunit = iunit,            &
+        file = '../Dados/q6.dat',   &
+        action = 'write',           &
+        status = 'unknown',         &
+        position = 'append',        &
+        iostat = iostat,            &
+        iomsg = iomsg               &
     )
 
     if (iostat /= 0) then
@@ -35,7 +35,6 @@ program questao6
     close(iunit)
 
     deallocate(A, B, C)
-
 contains
     subroutine flops_and_matrix_product(A, B, C, flops)
         implicit none        

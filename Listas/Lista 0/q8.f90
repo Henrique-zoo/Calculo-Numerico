@@ -32,7 +32,6 @@ program questao8
     close(iunit)
 
     deallocate(fib)
-
 contains
     subroutine fibonacci(n,  fib)
         integer, intent(in) :: n

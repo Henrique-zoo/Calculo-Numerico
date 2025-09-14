@@ -13,7 +13,13 @@ program questao1
         sequence(i) = sin(i/real(N) * 2*PI)
     end do
 
-    open(newunit=iunit, file='../Dados/q1.dat', status='replace', iostat=iostat, iomsg=iomsg)
+    open(&
+        newunit = iunit,            &
+        file = '../Dados/q1.dat',   &
+        status = 'replace',         &
+        iostat = iostat,            &
+        iomsg = iomsg               &
+    )
     
     if (iostat == 0) then
         do i = 1, N
@@ -27,5 +33,4 @@ program questao1
     close(iunit)
 
     deallocate(sequence)
-
 end program questao1

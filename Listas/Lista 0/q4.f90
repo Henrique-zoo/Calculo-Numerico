@@ -7,12 +7,12 @@ program questao4
     N = 100
 
     open(&
-        newunit = iunit, &
-        file = '../Dados/q4.dat', &
-        action = 'write', &
-        status = 'replace', &
-        iostat = iostat, &
-        iomsg = iomsg &
+        newunit = iunit,            &
+        file = '../Dados/q4.dat',   &
+        action = 'write',           &
+        status = 'replace',         &
+        iostat = iostat,            &
+        iomsg = iomsg               &
     )
 
     if (iostat /= 0) then

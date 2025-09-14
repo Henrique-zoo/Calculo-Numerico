@@ -13,12 +13,12 @@ program questao5
     trans_matrix = transposta(matrix)
 
     open(&
-        newunit = iunit, &
-        file = '../Dados/q5.dat', &
-        status = 'replace', &
-        action = 'write', &
-        iostat = iostat, &
-        iomsg = iomsg &
+        newunit = iunit,            &
+        file = '../Dados/q5.dat',   &
+        status = 'replace',         &
+        action = 'write',           &
+        iostat = iostat,            &
+        iomsg = iomsg               &
     )
 
     if (iostat /= 0) then
@@ -31,12 +31,12 @@ program questao5
     close(iunit)
 
     open(&
-        newunit = iunit, &
+        newunit = iunit,                &
         file = '../Dados/q5_trans.dat', &
-        status = 'replace', &
-        action = 'write', &
-        iostat = iostat, &
-        iomsg = iomsg &
+        status = 'replace',             &
+        action = 'write',               &
+        iostat = iostat,                &
+        iomsg = iomsg                   &
     )
 
     if (iostat /= 0) then
